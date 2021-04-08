@@ -1,7 +1,7 @@
 ---
 title: "직렬화 vs 마샬링 vs 역직렬화"
 date: 2021-04-09
-categories: serialize
+tags: serialize
 ---
 
 # 직렬화란(Serialize)란 ?
