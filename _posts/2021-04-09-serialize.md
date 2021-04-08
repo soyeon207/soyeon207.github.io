@@ -4,8 +4,6 @@ date: 2021-04-09
 tags: serialize
 ---
 
-# 직렬화란(Serialize)란 ?
-
 ### 직렬화(Serialize)
 
 object 나 data 를 저장하거나 나중에 재구성할 수 있는 포맷으로 변환 하는 과정
@@ -32,6 +30,8 @@ object 를 직렬화 하는 걸 **마샬링**이라고도 한다
 
 ![https://www.geeksforgeeks.org/serialization-in-java/](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2016/01/serialize-deserialize-java.png)
 
+### 예시
+serialize(자바), csv, json 등
 
 #### 참고 문서
 
