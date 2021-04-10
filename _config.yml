@@ -158,7 +158,8 @@ yat:
 markdown: kramdown
 kmarkdown:
   input: GFM
-
+theme: jekyll-theme-yat
+remote_theme: "jeffreytse/jekyll-theme-yat"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
