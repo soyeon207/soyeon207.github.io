@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 자바 직렬화
-categories: 개발
+categories: 자바
 tags: [자바,직렬화]
 ---
 
