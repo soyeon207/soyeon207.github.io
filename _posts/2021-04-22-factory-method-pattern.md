@@ -24,7 +24,7 @@ tags: [디자인패턴, 팩토리패턴, 생성패턴]
 ### 예제 
 ```java
 interface Movie {
-   public void ticketing();
+   public Movie ticketing();
 }
 ```
 

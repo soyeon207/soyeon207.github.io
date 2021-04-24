@@ -21,7 +21,7 @@ EX ) 빌더 패턴 쓰는건 어떤가요 ? 처럼 이런이런 식으로 설계
 
 #### 생성(Creational) 패턴
 - 시스템으로부터 객체 생성/합성 을 분리해내기 위함
-- 객체가 변경되어도 프로그램 구조에 영향이 없도록 함 
+- 객체가 변경되어도 프로그램 구조에 영향이 없도록 유연성 제공 
 
 싱글턴 패턴 (Singleton Pattern), 프로토타입 패턴 (Prototype Pattern), 팩토리 메소드 패턴 (Factory Method Pattern), 빌더 패턴 (Builder Pattern), 추상 팩토리 패턴 (Abstract Factory Pattern)
 #### 구조(Structural) 패턴
