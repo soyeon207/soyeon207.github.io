@@ -19,49 +19,126 @@ tags: [디자인패턴, 플라이웨이트패턴, 구조패턴]
 - Client : 사용자 
 
 ### 예제 
+#### 첫번째
 **Flyweight : 공유할 클래스 인터페이스 선언**
 ```JAVA
-public interface Food {
-  public void eat();
+public interface Building {
+  public void make(int x, int y, Color color);
 }
 ```
 
 **ConcreteFlyweight : 클래스 정의**
 ```JAVA
-public class pizza implements Food {
+public class Company implements Building {
 
-  public Pizza() {
-    System.out.println("피자 !!");
+  public Company() {
+    System.out.println("회사건물 !!");
   }
 
   @Override
-  public void eat() {
-    System.out.println("먹기 !! ");
+  public void make(int x, int y, Color color) {
+    System.out.println("회사건물 세우기");
   }
 }
 
-public class Hamburger implements Food {
-  public Hamburger() {
-    System.out.println("햄버거 !!");
+public class Store implements Building {
+  public Store() {
+    System.out.println("가게 !!");
   }
 
   @Override
-  public void eat() {
-    System.out.println("먹기 !!");
+  public void make(int x, int y, Color color) {
+    System.out.println("가게건물 세우기");
   }
 }
 ```
 
-
-
 **FlyweightFactory : Flyweight의 인스턴스 생성 혹은 공유**
+```JAVA
+public class Factory {
+  private static final HashMap<BuildingType, Building> buildings = new HashMap<BuildingType, Building>();
 
-**Client : 사용자**
+  public static Building getBuilding(BuildingType type) {
+    Building building = buildings.get(type);
 
+    if(building == null) {
+      if (type.equals(BuildingType.STORE))) {
+        building = new Store();
+      } else if(type.equals(BuildingType.COMPANY)) {
+        building = new Company();
+      } else {
+        return null;
+      }
+      buildings.put(type, building);
+    } 
+    return building;
+  }
 
-- 자바 Stirng pool
-  - 컴파일 할 때 스트링 객체로 선언되어 있는 것들 jvm heap 에 들어가고 같은 내용이 선언되면 기존의 객체 참조
+  public static enum BuildingType {
+    STORE, COMPANY
+  }
+}
+```
+
+#### 두번째
+```JAVA
+public class BuildingModel {
+  Height height;
+  Width width;
+
+  public BuildingModel() {
+    height = new Hieght(300);
+    width = new Width(300);
+  }
+}
+
+public class Building {
+  BuildingModel buildingModel;
+  Location location;
+  Color color;
+}
+
+public class BuildingFactory {
+  private static final BuildingModel buildingModel = new BuildingModel();
+
+  static public Building create(Location location, Color color) {
+    Building building = new Building();
+    building.setBuildingModel(buildingModel);
+    building.setLocation(location);
+    building.setColor(color);
+    return building;
+  }
+}
+
+```
+
+### 패턴 활용 예시
+#### JAVA String pool
+```JAVA
+class Main{
+  public static void Main() {
+    String s1 = "String";
+    String s2 = "String";
+
+    System.out.println(s1 == s2); // true
+  }
+}
+```
+- 메모리에 존재하는지 확인 후, 메모리에 존재하면 해당 메모리 값을 참조
+
+#### JAVA valueOf()
+```
+public static Integer valueOf(int i) {
+        assert IntegerCache.high >= 127;
+        if (i >= IntegerCache.low && i <= IntegerCache.high)
+             return IntegerCache.cache[i + (-IntegerCache.low)];
+         return new Integer(i);
+}
+```
+- 요청시에 새로 만드는게 아니라 IntegerCache에 이미 존재하는 참조를 반환
 
 ### 레퍼런스
-- [https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%9B%A8%EC%9D%B4%ED%8A%B8_%ED%8C%A8%ED%84%B4](https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%9B%A8%EC%9D%B4%ED%8A%B8_%ED%8C%A8%ED%84%B4)
-- 
+- [ko.wikipedia.org/wiki](https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%9B%A8%EC%9D%B4%ED%8A%B8_%ED%8C%A8%ED%84%B4)
+- [https://readystory.tistory.com/137](https://readystory.tistory.com/137)
+- [https://m.blog.naver.com/2feelus/220669069127](https://m.blog.naver.com/2feelus/220669069127)
+- [https://lee1535.tistory.com/106](https://lee1535.tistory.com/106)
