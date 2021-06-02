@@ -19,7 +19,8 @@
 
 [플라이 웨이트 패턴 (Flyweight pattern)](https://soyeon207.github.io/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/2021/04/16/flyweight-pattern.html)
 
-#### 행위패턴
+#### 행동패턴
+[반복자 패턴 (이터레이터 패턴, iterator pattern)](https://soyeon207.github.io/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/2021/06/03/iterator-pattern.html)
 
 ### 자바 
 [자바 직렬화](https://soyeon207.github.io/%EC%9E%90%EB%B0%94/2021/04/08/serialize.html)
