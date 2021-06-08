@@ -21,7 +21,7 @@ tags: [디자인패턴, 브리지패턴, 구조패턴]
 
 **Implementor : 기능 구현을 위한 인터페이스**
 ```Java
-public interface MakeHandler() {
+public interface MakeHandler {
     public void prepareIngredient();
     public void stuffingIngredient();
 }
@@ -29,7 +29,7 @@ public interface MakeHandler() {
 
 **ConcreteImplementor : 실제 기능 구현**
 ```Java
-public class PotatoHotdogMethod() implements MakeHandler {
+public class PotatoHotdogMethod implements MakeHandler {
     public void prepareIngredient() {
         System.out.println("감자 준비");
     }
@@ -39,7 +39,7 @@ public class PotatoHotdogMethod() implements MakeHandler {
     }
 }
 
-public class CheeseHotdogMethod() implements MakeHandler {
+public class CheeseHotdogMethod implements MakeHandler {
     public void prepareIngredient() {
         System.out.println("치즈 준비");
     }
@@ -52,7 +52,7 @@ public class CheeseHotdogMethod() implements MakeHandler {
 
 **Abstraction : 기능 계층의 최상위 클래스**
 ```Java
-public abstract class HotDog() {
+public abstract class HotDog {
     private MakeHandler makeHandler;
 
     public HotDog(MakeHandler makeHandler) {
@@ -60,11 +60,11 @@ public abstract class HotDog() {
     }
 
     public void prepareIngredient() {
-        makeHandler.prepareIngredient;
+        makeHandler.prepareIngredient();
     }
 
     public void stuffingIngredient() {
-        makeHandler.stuffingIngredient;
+        makeHandler.stuffingIngredient();
     }
 
     public abstract void fry();
@@ -99,9 +99,9 @@ public class CheeseHotDog extends HotDog {
 
 ```Java
 public class Main {
-    public static void Main(String args[]) {
+    public static void main(String args[]) {
         HotDog cheeseHotDog = new CheeseHotDog(new CheeseHotdogMethod());
-        HotDog potatoHotDog = new PotatoHotDog(new PotatoHotDogMethod());
+        HotDog potatoHotDog = new PotatoHotDog(new PotatoHotdogMethod());
         cheeseHotDog.fry();
         cheeseHotDog.prepareIngredient();
         cheeseHotDog.stuffingIngredient();
