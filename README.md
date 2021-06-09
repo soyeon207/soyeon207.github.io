@@ -24,3 +24,4 @@
 
 ### 자바 
 [자바 직렬화](https://soyeon207.github.io/%EC%9E%90%EB%B0%94/2021/04/08/serialize.html)
+[자바 object 매핑 (modelmapper, mapstruct)](https://soyeon207.github.io/자바/2021/06/09/mapping-java.html)
