@@ -85,24 +85,25 @@
       handleThemeToggle(event.target.checked);
     });
 
-    if (nightModeOption == 'auto') {
-      var data = autoThemeToggle();
+    // 자동으로 Dark 모드 되지 않도록 주석 처리 
+    // if (nightModeOption == 'auto') {
+    //   var data = autoThemeToggle();
 
-      // Toggle theme by local setting
-      if (data.toggleAt > themeData.autoToggleAt) {
-        themeData.autoToggleAt = data.toggleAt;
-        handleThemeToggle(data.nightShift);
-      } else {
-        handleThemeToggle(themeData.nightShift);
-      }
-    } else if (nightModeOption == 'manual') {
-      handleThemeToggle(themeData.nightShift);
-    } else {
-      var nightShift = themeData.nightShift;
-      if (nightShift === undefined) {
-        nightShift = nightModeOption === 'on';
-      }
-      handleThemeToggle(nightShift);
-    }
+    //   // Toggle theme by local setting
+    //   if (data.toggleAt > themeData.autoToggleAt) {
+    //     themeData.autoToggleAt = data.toggleAt;
+    //     handleThemeToggle(data.nightShift);
+    //   } else {
+    //     handleThemeToggle(themeData.nightShift);
+    //   }
+    // } else if (nightModeOption == 'manual') {
+    //   handleThemeToggle(themeData.nightShift);
+    // } else {
+    //   var nightShift = themeData.nightShift;
+    //   if (nightShift === undefined) {
+    //     nightShift = nightModeOption === 'on';
+    //   }
+    //   handleThemeToggle(nightShift);
+    // }
   })();
 </script>
