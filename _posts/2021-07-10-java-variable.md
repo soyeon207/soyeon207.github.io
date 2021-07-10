@@ -1,6 +1,6 @@
 ---
 layout: post
-title: <JAVA> 자바 변수의 종류 (인스턴스 변수, 클래스 변수, 지역 변수)
+title: <JAVA> 전역변수와 지역변수 
 categories: JAVA
 tags: [JAVA]
 ---
