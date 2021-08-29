@@ -28,3 +28,9 @@
 
 ## DB
 [<DB> 인덱스(index) 란 ? - 이론편](https://soyeon207.github.io/db/2021/07/06/index-theory.html)
+[트랜잭션이란?](https://soyeon207.github.io/db/2021/08/29/transaction.html)
+[트랜잭션 격리 수준 (isolation Level)](https://soyeon207.github.io/db/2021/08/29/isolation-level.html)
+[InnoDB 의 Lock](https://soyeon207.github.io/db/2021/08/29/innodb-lock.html)
+[낙관적 락(optimistic Lock)과 비관적 락(pessimistic Lock)](https://soyeon207.github.io/db/2021/08/29/optimise-pessimistic-lock.html)
+[교착상태 (DeadLock)](https://soyeon207.github.io/db/2021/08/29/deadlock.html)
+[분산락 (Distributed lock)](https://soyeon207.github.io/db/2021/08/29/distributed-lock.html)
