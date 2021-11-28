@@ -277,21 +277,34 @@ html {
     margin-bottom: 2px;
     transition: 0.2s all;
 
+    .new::after {
+      content: 'NEW';
+      position: absolute;
+      margin-left: 8px;
+      margin-top: 3px;
+      padding: 0px 3px;
+      background-color: $brand-color;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      border-radius: 2px;
+    }
+
     a {
       text-decoration: none;
 
-      &:after {
-        content: 'NEW';
-        position: absolute;
-        margin-left: 8px;
-        margin-top: 3px;
-        padding: 0px 3px;
-        background-color: $brand-color;
-        color: #fff;
-        font-size: 10px;
-        font-weight: 600;
-        border-radius: 2px;
-      }
+      // &:after {
+      //   content: 'NEW';
+      //   position: absolute;
+      //   margin-left: 8px;
+      //   margin-top: 3px;
+      //   padding: 0px 3px;
+      //   background-color: $brand-color;
+      //   color: #fff;
+      //   font-size: 10px;
+      //   font-weight: 600;
+      //   border-radius: 2px;
+      // }
 
       &:visited:after {
         background-color: #fff;
@@ -451,15 +464,9 @@ html {
         @include relative-font-size(1.075);
       }
 
-      a {
-        color: #666;
 
-        &:hover {
-          color: #333;
-        }
-
-        &:after {
-          content: 'NEW';
+      .new::after {
+        content: 'NEW';
           position: absolute;
           margin-left: 8px;
           margin-top: 3px;
@@ -469,7 +476,27 @@ html {
           font-size: 10px;
           font-weight: 600;
           border-radius: 2px;
+      }
+      a {
+        color: #666;
+
+        &:hover {
+          color: #333;
         }
+
+      
+        // &:after {
+        //   content: 'NEW';
+        //   position: absolute;
+        //   margin-left: 8px;
+        //   margin-top: 3px;
+        //   padding: 0px 3px;
+        //   background-color: $brand-color;
+        //   color: #fff;
+        //   font-size: 10px;
+        //   font-weight: 600;
+        //   border-radius: 2px;
+        // }
 
         &:visited:after {
           background-color: #fff;
@@ -720,17 +747,19 @@ html {
       color: #000;
     }
 
-    &:after {
-      content: 'NEW';
-      position: absolute;
-      margin-left: 8px;
-      margin-top: 3px;
-      padding: 0px 3px;
-      background-color: $brand-color;
-      color: #fff;
-      font-size: 10px;
-      font-weight: 600;
-      border-radius: 2px;
+    &.new {
+      &:after {
+        content: 'NEW';
+        position: absolute;
+        margin-left: 8px;
+        margin-top: 3px;
+        padding: 0px 3px;
+        background-color: $brand-color !important;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 600;
+        border-radius: 2px;
+      }
     }
 
     &:visited:after {

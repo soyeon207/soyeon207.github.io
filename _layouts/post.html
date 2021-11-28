@@ -50,7 +50,10 @@ sidebar:
       <ul>
         {% assign posts = site[page.collection] | sample:4 %}
         {%- for post in posts -%}
-        <li><a class="post-link" href="{{post.url | relative_url}}" title="{{ page.next.title | escape }}">{{ post.title | escape | truncatewords: 12 }}</a></li>
+        {% assign past_ts = post.date | date: '%s' | plus: 0 %}
+        {% assign current_ts = site.time | date: '%s' | plus: 0 %}
+        {% assign delta_ts = current_ts | minus: past_ts %}   
+        <li><a class="post-link {% if 86400 > delta_ts %}new{% endif %}" href="{{post.url | relative_url}}" title="{{ page.next.title | escape }}">{{ post.title | escape | truncatewords: 12 }}</a></li>
         {%- endfor -%}
       </ul>
     </div>
