@@ -7,7 +7,7 @@ tags: [Spring, SpringBoot]
 # Spring vs Spring boot
 사용하고 있는 자바 프레임 워크가 Spring 인가요 Spring boot 인가요 라고 물어봤을 때 둘 간의 차이점이 뭐지 라고 고민했던 적이 있었다. 이번 포스팅에선 Spring 과 Spring boot 가 뭔지에 대해서 알아보고 더 나아가서 두개의 차이점까지 알아보자
 
-##  Spring Framework
+## Spring Framework
 > JAVA 기술들을 더 쉽게 사용할 수 있게 해주는 오픈소스 프레임 워크
 
 - 가장 대중적이고 대표적인 java 프레임워크
@@ -52,6 +52,8 @@ tags: [Spring, SpringBoot]
     Spring Boot 프로젝트를 생성하여 main에 가게 되면 **@SpringBootApplication** 어노테이션이 붙게 된다 
 
     **@SpringBootApplication** 내부 어노테이션 
+    ![https://user-images.githubusercontent.com/39696812/144099349-9da2cb6a-a836-41de-8271-47dcefd9cf56.png](https://user-images.githubusercontent.com/39696812/144099349-9da2cb6a-a836-41de-8271-47dcefd9cf56.png)
+
     - `@ComponentScan` 
         - basePackages 프로퍼티 값에 별도의 경로를 설정하지 않으면 해당 어노테이션이 위치한 패키지가 루트 경로가 설정
         -  component-scan 을 통해 component 를 찾고 bean 생성을 진행하면서 우리가 설정한 bean 들이 생성
@@ -99,9 +101,7 @@ tags: [Spring, SpringBoot]
    - Spring Boot 자체를 업그레이드 하면 하위 종속성들도 일관된 방식으로 업그레이드
 
    ```java
-   plugins {
-     id "io.spring.dependency-management" version "1.0.9.RELEASE"
-   }
+   apply plugin: 'io.spring.dependency-management'
    ```
 
    ➡️ Spring Boot의 dependency-management를 이용하여 **단 한줄의 의존성으로 수 많은 프로젝트들의 버전을 충돌 없이 관리**할 수 있음 
@@ -118,6 +118,6 @@ tags: [Spring, SpringBoot]
 - Tomcat이나 Jetty같은 내장 서버를 가지고 있기 때문에 jar파일로 배포 가능 
 
 ## 레퍼런스
-[Spring vs Spring Boot](https://limjunho.github.io/2021/08/15/Spring-vs-SpringBoot.html)
+[Spring vs Spring Boot](https://limjunho.github.io/2021/08/15/Spring-vs-SpringBoot.html)<br>
 [Spring🌱 vs SpringBoot🌼](https://ssoco.tistory.com/66)
 
