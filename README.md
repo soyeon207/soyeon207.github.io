@@ -23,6 +23,11 @@
 |`자바`|[<JAVA> 자바 빌드 관리 도구 (Ant, Maven, Gradle)](https://soyeon207.github.io/java/2021/07/22/java-build-tool.html)|
 |`자바`|[<JAVA> 자바의 정의와 특징 및 SOLID](https://soyeon207.github.io/java/2021/07/22/what-is-java.html)|
 |`자바`|[<JAVA> 접근 제어자 (Access Modifier)](https://soyeon207.github.io/%EC%9E%90%EB%B0%94/2021/12/04/access-modifier.html)|
+|`자바`|[<JAVA> 자바의 구동원리와 JVM](https://soyeon207.github.io/%EC%9E%90%EB%B0%94/2021/12/08/what-is-jvm.html)|
+|`자바`|[<JAVA> GC (가비지 컬렉션)이란?](https://soyeon207.github.io/%EC%9E%90%EB%B0%94/2021/12/09/what-is-GC.html)|
+|`자바`|[<JAVA> final 이란?](https://soyeon207.github.io/%EC%9E%90%EB%B0%94/2021/12/15/what-is-final.html)|
+|`자바`|[<JAVA> static 이란?](https://soyeon207.github.io/%EC%9E%90%EB%B0%94/2021/12/15/what-is-static.html)|
+|`자바`|[<Spring> IOC 란?](https://soyeon207.github.io/%EC%8A%A4%ED%94%84%EB%A7%81/2021/12/21/what-is-IOC.html)|
 |`DB`|[<DB> 인덱스(index) 란 ? - 이론편](https://soyeon207.github.io/db/2021/07/06/index-theory.html)|
 |`DB`|[트랜잭션이란?](https://soyeon207.github.io/db/2021/08/29/transaction.html)|
 |`DB`|[트랜잭션 격리 수준 (isolation Level)](https://soyeon207.github.io/db/2021/08/29/isolation-level.html)|
